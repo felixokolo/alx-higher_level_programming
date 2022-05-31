@@ -8,5 +8,3 @@ def uppercase(str):
         else:
             d = c
         print("{}".format(d), end="")
-
-    print("\n")

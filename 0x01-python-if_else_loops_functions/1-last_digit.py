@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
+if number < 0:
+    number = -number
 last = number % 10
 str = f"Last digit of {number:d} is {last:d}"
 if last > 5:
