@@ -6,13 +6,13 @@ def pow(a, b):
     if b == 1:
         return a
     if b > 1:
-        for i in range(b - 1):
+        for i in range(b):
             ans = ans * a
         return ans
     if b == -1:
         return 1 / a
     if b < -1:
-        for i in range(-b - 1):
+        for i in range(-b):
             ans = ans * a
         return 1 / ans
     return 0
