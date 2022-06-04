@@ -17,7 +17,7 @@ int is_palindrome(listint_t **head)
 	int *arr, i, ret = 0;
 
 	if (!head || !*head)
-		return (0);
+		return (1);
 	node = *head;
 	while (node)
 	{
