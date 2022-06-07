@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "listobject.h"
+#include "object.h"
 
 
 /**
@@ -9,7 +11,7 @@
  * Return: void
  */
 
-void print_python_list_info(void __attribute__((__unused__)) *p)
+void print_python_list_info(void *p)
 {
 	
 }
