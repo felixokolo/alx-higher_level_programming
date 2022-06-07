@@ -1,6 +1,6 @@
-#include "listobject.h"
-#include "object.h"
 #include <stdio.h>
+#include <stdlib.h>
+
 
 /**
  * print_python_list_info - prints basic
@@ -9,7 +9,7 @@
  * Return: void
  */
 
-void print_python_list_info(PyObject *p)
+void print_python_list_info(void __attribute__((__unused__)) *p)
 {
-	printf("%d", PyList_Size(p));
+	
 }
