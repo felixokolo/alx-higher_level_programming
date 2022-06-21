@@ -63,7 +63,6 @@ class Square:
                 else:
                     print("")
 
-
     @property
     def position(self):
         """Get/set the current position of the square."""
