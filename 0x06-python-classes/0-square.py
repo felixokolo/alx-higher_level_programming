@@ -5,7 +5,6 @@
 
 class Square:
     """Practice empty class
-    Args:
 
     Attributes:
 
