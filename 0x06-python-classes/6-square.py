@@ -5,17 +5,17 @@
 
 class Square:
     """Practice empty class
-    
+
     Attributes:
         __size (int): Private size of square attribute
 
     """
     def __init__(self, size=0, position=(0, 0)):
         """ defining the init functiom
-        
+
         Args:
             size (int): for initializing the size attribute
-            
+
         """
         if isinstance(size, int):
             if size >= 0:
@@ -28,14 +28,14 @@ class Square:
 
     def area(self):
         """ Method for calculating area of square"""
-        
+
         return self.__size ** 2
-        
+
     @property
     def size(self):
         """Size getter"""
         return self.__size
-        
+
     @size.setter
     def size(self, value):
         """Size setter
@@ -49,7 +49,7 @@ class Square:
                 raise ValueError("size must be >= 0")
         else:
             raise TypeError("size must be an integer")
-            
+
     def my_print(self):
         """prints square"""
         if self.__size == 0:
@@ -62,8 +62,8 @@ class Square:
                     print("#", end="")
                 else:
                     print("")
-                    
-    
+
+
     @property
     def position(self):
         """Get/set the current position of the square."""
