@@ -4,6 +4,7 @@
 
 math = __import__('math')
 
+
 class MagicClass:
     """Practice empty class
 
