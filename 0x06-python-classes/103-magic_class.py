@@ -2,6 +2,7 @@
 
 """Defining MagicClass class"""
 
+math = __import__('math')
 
 class MagicClass:
     """Practice empty class
@@ -26,9 +27,9 @@ class MagicClass:
     def area(self):
         """ Method for calculating area of square"""
 
-        return 3.124 * self.__radius ** 2
+        return math.pi * self.__radius ** 2
 
     def circumference(self):
         """ Method for calculating circumference of square"""
 
-        return 3.124 * self.__radius * 2
+        return math.pi * self.__radius * 2
