@@ -82,7 +82,7 @@ class Square:
         """Prints representation of instance"""
         outp = ""
         if self.__size == 0:
-            return outp + "\n"
+            return outp
         else:
             for i in range(0, self.__position[1]):
                 outp += "\n"
