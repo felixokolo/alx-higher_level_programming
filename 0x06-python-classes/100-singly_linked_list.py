@@ -122,6 +122,7 @@ class SinglyLinkedList:
                     self.__head.next_node = __pres
                 else:
                     __pres = Node(value, self.__head)
+                    self.__head = __pres
 
     def __str__(self):
         """Prints representation of instance"""
