@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-import math
-
 """Defining MagicClass class"""
 
 
@@ -19,7 +17,7 @@ class MagicClass:
             radius (int): for initializing the radius attribute
 
         """
-        if isinstance(radius, int) or  isinstance(radius, float):
+        if isinstance(radius, int) or isinstance(radius, float):
             self.__radius = radius
         else:
             self.__radius = None
@@ -28,9 +26,9 @@ class MagicClass:
     def area(self):
         """ Method for calculating area of square"""
 
-        return math.pi * self.__radius ** 2
+        return 3.124 * self.__radius ** 2
 
     def circumference(self):
         """ Method for calculating circumference of square"""
 
-        return math.pi * self.__radius * 2
+        return 3.124 * self.__radius * 2
