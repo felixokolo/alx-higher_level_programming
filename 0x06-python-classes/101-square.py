@@ -92,5 +92,6 @@ class Square:
                 for j in range(self.__size):
                     outp += "#"
                 else:
-                    outp += "\n"
+                    if i < self.__size - 1:
+                        outp += "\n"
         return outp
