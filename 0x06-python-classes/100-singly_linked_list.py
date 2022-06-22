@@ -23,7 +23,7 @@ class Node:
         else:
             raise TypeError("data must be an integer")
 
-        if isinstance(next_node, Node) or next_node == None:
+        if isinstance(next_node, Node) or next_node is None:
             self.__next_node = next_node
         else:
             raise TypeError("next_node must be a Node object")
@@ -60,11 +60,10 @@ class Node:
         Args:
             value (Node): new value for Next_node
         """
-        if isinstance(value, Node) or value == None:
+        if isinstance(value, Node) or value is None:
             self.__next_node = value
         else:
             raise TypeError("next_node must be a Node object")
-
 
 
 class SinglyLinkedList:
@@ -89,19 +88,19 @@ class SinglyLinkedList:
             value (int): value to be added to list
         """
 
-        if self.__head == None:
+        if self.__head is None:
             self.__head = Node(value, None)
         else:
             __tmp = self.__head
-            if __tmp.next_node != None:
+            if __tmp.next_node is not None:
                 __prev = None
-                while __tmp.next_node != None:
+                while __tmp.next_node is not None:
                     if value > __tmp.data:
                         __prev = __tmp
                         __tmp = __tmp.next_node
                     else:
                         __pres = Node(value, __tmp)
-                        if __prev != None:
+                        if __prev is not None:
                             __prev.next_node = __pres
                         else:
                             self.__head = __pres
@@ -112,7 +111,7 @@ class SinglyLinkedList:
                         __tmp.next_node = __pres
                     else:
                         __pres = Node(value, __tmp)
-                        if __prev != None:
+                        if __prev is not None:
                             __prev.next_node = __pres
                         else:
                             self.__head = __pres
@@ -128,9 +127,9 @@ class SinglyLinkedList:
         """Prints representation of instance"""
         outp = ""
         tmp = self.__head
-        while tmp != None:
+        while tmp is not None:
             outp += str(tmp.data)
-            if tmp.next_node != None:
+            if tmp.next_node is not None:
                 outp += "\n"
             tmp = tmp.next_node
         return outp
