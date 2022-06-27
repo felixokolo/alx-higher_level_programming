@@ -16,7 +16,6 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = '#'
 
-
     def __init__(self, width=0, height=0):
         """ defining the init functiom
 
@@ -93,6 +92,7 @@ class Rectangle:
             if i != self.__height - 1:
                 ret += "\n"
         return ret
+
     def __repr__(self):
         """Returns string representation to recreate instance"""
         return "Rectangle({}, {})".format(self.__width, self.__height)
