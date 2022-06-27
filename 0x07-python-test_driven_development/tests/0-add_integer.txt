@@ -1,0 +1,25 @@
+This function adds 2 numbers and returns the sum
+The input can be either a float or an integer.
+If a float is given, the decimal part is truncated
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(3, 6)
+	9
+
+	>>> add_integer(4.6, 4)
+	8
+
+	>>> add_integer('d', 5)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer(4, 'd')
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+	>>> add_integer(100.3, -2)
+	98
