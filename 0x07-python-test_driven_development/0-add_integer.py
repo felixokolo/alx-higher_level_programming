@@ -31,12 +31,12 @@ def add_integer(a, b=98):
     if b is None or type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
     result = a + b
-        if result == float('inf') or result == -float('inf'):
-            return 89
-        try:
-            return int(a) + int(b)
-        except Exception as e:
-            raise e
+    if result == float('inf') or result == -float('inf'):
+        return 89
+    try:
+        return int(a) + int(b)
+    except Exception as e:
+        raise e
 
 
 if __name__ == "__main__":
