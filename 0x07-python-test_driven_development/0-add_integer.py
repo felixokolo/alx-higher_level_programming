@@ -31,9 +31,9 @@ def add_integer(a, b=98):
     if a is None or type(b) is not int and type(b) is not float:
         raise TypeError("b must be an integer")
 
-    if a == float('inf'):
+    if a == float('inf') or a == -float('inf'):
         return 98
-    if b == float('inf'):
+    if b == float('inf') or b == -float('inf'):
         return 98
     try:
         return int(a) + int(b)
