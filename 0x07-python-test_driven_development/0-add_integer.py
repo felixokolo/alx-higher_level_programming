@@ -2,6 +2,7 @@
 
 """Adding numbers"""
 
+
 def add_integer(a, b=98):
     """Adds 2 numbers
 
@@ -34,6 +35,7 @@ def add_integer(a, b=98):
         return int(a) + int(b)
     except Exception as e:
         raise e
+
 
 if __name__ == "__main__":
     import doctest

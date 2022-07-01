@@ -2,6 +2,7 @@
 
 """Function that divides all elements of a matrix"""
 
+
 def matrix_divided(matrix, div):
     """divides all elements of a matrix
 
@@ -24,19 +25,23 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     if type(matrix) is not list:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix \
+                (list of lists) of integers/floats")
     for i in range(len(matrix)):
         if type(matrix[i]) is not list:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError("matrix must be a matrix \
+                    (list of lists) of integers/floats")
         if i == 0:
             lent = len(matrix[i])
         else:
             if lent != len(matrix[i]):
-                raise TypeError("Each row of the matrix must have the same size")
+                raise TypeError("Each row of the matrix \
+                        must have the same size")
             lent = len(matrix[i])
         for j in range(lent):
             if type(i) is not int and type(i) is not float:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix \
+                        (list of lists) of integers/floats")
     return list(map(lambda x: list(map(lambda y: round(y/div, 2), x)), matrix))
 
 
