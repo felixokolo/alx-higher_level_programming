@@ -19,3 +19,16 @@ If a float is given, the decimal part is truncated
 
 	>>> print(my_list)
 	[1, 4, 2, 3, 5]
+
+	>>> a = MyList()
+	>>> print(a)
+	[]
+	>>> a.print_sorted()
+	[]
+	>>> a.append('q')
+	>>> print(a)
+	['q']
+	>>> a.print_sorted()
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer

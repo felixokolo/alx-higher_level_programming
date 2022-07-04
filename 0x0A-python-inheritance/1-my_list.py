@@ -14,6 +14,8 @@ class MyList(list):
         new = []
         for i in set(self):
             for j in self:
+                if type(j) != int:
+                    raise TypeError("a must be an integer")
                 if j == i:
                     new.append(j)
         print(new)
