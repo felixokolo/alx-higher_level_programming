@@ -1,14 +1,9 @@
 #!/usr/bin/python3
-lookup = __import__('0-lookup').lookup
+BaseGeometry = __import__('6-base_geometry').BaseGeometry
 
-class MyClass1(object):
-    pass
+bg = BaseGeometry()
 
-class MyClass2(object):
-    my_attr1 = 3
-    def my_meth(self):
-        pass
-
-print(lookup(MyClass1))
-print(lookup(MyClass2))
-print(lookup(int))
+try:
+    print(bg.area())
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
