@@ -13,6 +13,6 @@ def to_json_string(my_obj):
     Return: String representation of my_obj
     """
 
-    if my_obj == None:
+    if my_obj is None:
         return
     return json.dumps(my_obj)

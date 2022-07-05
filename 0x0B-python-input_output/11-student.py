@@ -2,6 +2,7 @@
 """ My class module
 """
 
+
 class Student:
     """ My class
     """
@@ -22,19 +23,19 @@ class Student:
     def to_json(self, attrs=None):
         """method  that retrieves a dictionary
         representation of a Student instance
-        
+
         Args:
             attrs (list): list of strings to return
         """
         ret = self.__dict__
         if type(attrs) == list:
-            return {a : ret[a] for a in ret if a in attrs}
+            return {a: ret[a] for a in ret if a in attrs}
         return ret
-        
+
     def reload_from_json(self, json):
         """ method that replaces all attributes of the
         Student instance
-        
+
         Args:
             json (dict): new attributes values
         """

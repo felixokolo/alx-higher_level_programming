@@ -11,7 +11,7 @@ def load_from_json_file(filename):
     Returns: deserialized object file
     """
 
-    if filename == None:
+    if filename is None:
         return
     with open(filename, 'r', encoding="utf-8") as f:
         return json.load(f)
