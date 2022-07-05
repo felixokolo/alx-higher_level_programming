@@ -39,4 +39,5 @@ class Student:
         Args:
             json (dict): new attributes values
         """
-        self.__dict__ = json
+        if json is not None:
+            self.__dict__ = json
