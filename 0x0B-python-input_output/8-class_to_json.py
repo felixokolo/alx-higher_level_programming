@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Reading and writing module"""
 
-import json
-
 
 def class_to_json(obj):
     """function that returns the dictionary description
