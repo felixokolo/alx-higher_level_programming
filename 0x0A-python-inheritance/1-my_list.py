@@ -13,7 +13,7 @@ class MyList(list):
             return
         for j in self:
             if type(j) != int:
-                return
+                raise TypeError("a must be an integer")
         new = sorted(self)
         print(new)
 
