@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('6-base_geometry').BaseGeometry
+Square = __import__('11-square').Square
 
-bg = BaseGeometry()
+s = Square(13)
 
-try:
-    print(bg.area())
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+print(s)
+print(s.area())

@@ -18,6 +18,8 @@ class BaseGeometry:
             value (int): parm to vlaidate
         Return:
         """
+        if type(name) != str:
+            return
 
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))

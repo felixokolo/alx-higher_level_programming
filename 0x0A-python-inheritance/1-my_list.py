@@ -11,13 +11,7 @@ class MyList(list):
         if self.__len__ == 0:
             print([])
             return
-        new = []
-        for i in set(self):
-            for j in self:
-                if type(j) != int:
-                    raise TypeError("a must be an integer")
-                if j == i:
-                    new.append(j)
+        new = sorted(self)
         print(new)
 
 
