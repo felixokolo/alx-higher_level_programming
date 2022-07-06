@@ -11,6 +11,9 @@ class MyList(list):
         if self.__len__ == 0:
             print([])
             return
+        for j in self:
+            if type(j) != int:
+                return
         new = sorted(self)
         print(new)
 
