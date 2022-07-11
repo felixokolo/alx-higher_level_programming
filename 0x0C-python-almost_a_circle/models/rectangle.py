@@ -39,10 +39,10 @@ class Rectangle(Base):
             value (int): new value for width
         """
         if isinstance(value, int):
-            if value >= 0:
+            if value > 0:
                 self.__width = value
             else:
-                raise ValueError("width must be >= 0")
+                raise ValueError("width must be > 0")
         else:
             raise TypeError("width must be an integer")
  
@@ -59,10 +59,10 @@ class Rectangle(Base):
             value (int): new value for height
         """
         if isinstance(value, int):
-            if value >= 0:
+            if value > 0:
                 self.__height = value
             else:
-                raise ValueError("height must be >= 0")
+                raise ValueError("height must be > 0")
         else:
             raise TypeError("height must be an integer")
 
@@ -70,7 +70,7 @@ class Rectangle(Base):
     @property
     def x(self):
         """x getter"""
-        return self.__width
+        return self.__x
 
     @x.setter
     def x(self, value):
@@ -105,3 +105,22 @@ class Rectangle(Base):
                 raise ValueError("y must be >= 0")
         else:
             raise TypeError("y must be an integer")
+
+
+    def area(self):
+        """Calculates the area of rectangle"""
+        return self.height * self.width
+
+
+    def display(self):
+        """Displays the rectangle using #"""
+        [print("") for i in range(self.y)]
+        for i in range(self.height):
+            [print(" ", end="") for i in range(self.x)]
+            for j in range(self.width):
+                print("#", end='')
+            print("")
+
+
+    def __str__(self):
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
