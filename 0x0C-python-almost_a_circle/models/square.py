@@ -39,7 +39,6 @@ class Square(Rectangle):
         """String representation of square"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
-
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute"""
         lent = len(args)

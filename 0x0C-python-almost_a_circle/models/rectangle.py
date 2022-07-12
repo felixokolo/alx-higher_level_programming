@@ -105,7 +105,6 @@ class Rectangle(Base):
         """Calculates the area of rectangle"""
         return self.height * self.width
 
-
     def display(self):
         """Displays the rectangle using #"""
         [print("") for i in range(self.y)]
@@ -117,7 +116,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """String representation of rectangle"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) \
+                {self.x}/{self.y} - {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute"""
@@ -149,4 +149,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Creates Dictionary representation"""
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return {'x': self.x, 'y': self.y, 'id': self.id,
+                'height': self.height, 'width': self.width}
