@@ -6,10 +6,10 @@ import sys
 sys.path.insert(0, 'models')
 Rectangle = __import__('rectangle').Rectangle
 
+
 class Square(Rectangle):
     """Square class definition
     """
-
 
     def __init__(self, size, x=0, y=0, id=None):
         """Init function for base class
@@ -19,7 +19,7 @@ class Square(Rectangle):
             y (float): Rectangle y position
             id (int): Base id
         """
-        Rectangle.__init__(self,size, size, x, y, id)
+        Rectangle.__init__(self, size, size, x, y, id)
 
     @property
     def size(self):
@@ -34,8 +34,6 @@ class Square(Rectangle):
         """
         self.width = value
         self.height = value
-
-
 
     def __str__(self):
         """String representation of square"""
@@ -65,8 +63,6 @@ class Square(Rectangle):
             self.size = kwargs.get('size', self.size)
             self.x = kwargs.get('x', self.x)
             self.y = kwargs.get('y', self.y)
-
-
 
     def to_dictionary(self):
         """Creates Dictionary representation"""
