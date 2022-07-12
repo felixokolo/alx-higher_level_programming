@@ -6,10 +6,10 @@ import sys
 sys.path.insert(0, 'models')
 Base = __import__('base').Base
 
+
 class Rectangle(Base):
     """Rectangle class definition
     """
-
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Init function for base class
@@ -24,7 +24,6 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-
 
     @property
     def width(self):
@@ -44,8 +43,7 @@ class Rectangle(Base):
                 raise ValueError("width must be > 0")
         else:
             raise TypeError("width must be an integer")
- 
- 
+
     @property
     def height(self):
         """height getter"""
@@ -65,7 +63,6 @@ class Rectangle(Base):
         else:
             raise TypeError("height must be an integer")
 
-
     @property
     def x(self):
         """x getter"""
@@ -84,8 +81,7 @@ class Rectangle(Base):
                 raise ValueError("x must be >= 0")
         else:
             raise TypeError("x must be an integer")
- 
- 
+
     @property
     def y(self):
         """y getter"""
@@ -105,7 +101,6 @@ class Rectangle(Base):
         else:
             raise TypeError("y must be an integer")
 
-
     def area(self):
         """Calculates the area of rectangle"""
         return self.height * self.width
@@ -120,11 +115,9 @@ class Rectangle(Base):
                 print("#", end='')
             print("")
 
-
     def __str__(self):
         """String representation of rectangle"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
-
 
     def update(self, *args, **kwargs):
         """ assigns an argument to each attribute"""
@@ -153,7 +146,6 @@ class Rectangle(Base):
             self.height = kwargs.get('height', self.height)
             self.x = kwargs.get('x', self.x)
             self.y = kwargs.get('y', self.y)
-
 
     def to_dictionary(self):
         """Creates Dictionary representation"""
