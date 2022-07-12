@@ -9,7 +9,6 @@ Base = __import__('base').Base
 class Rectangle(Base):
     """Rectangle class definition
     """
-    __nb_objects = 0
 
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -127,6 +126,35 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ assigns an argument to each attribute"""
         lent = len(args)
+        if lent == 1:
+            self.id = args[0]
+        elif lent == 2:
+            self.id, self.width = args
+        elif lent == 3:
+            self.id, self.width, self.height = args
+        elif lent == 4:
+            self.id, self.width, self.height, self.x, = args
+        elif lent == 5:
+            self.id, self.width, self.height, self.x, self.y = args
+        elif lent > 0:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        if lent > 0:
+            return
+        else:
+            self.id = kwargs.get('id', self.id)
+            self.width = kwargs.get('width', self.width)
+            self.height = kwargs.get('height', self.height)
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs.get('y', self.y)
+
+
+    def to_dictionary(self):
+        """Creates Dictionary representation"""
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}

@@ -73,7 +73,7 @@ class BaseTest(unittest.TestCase):
         r1 = Rectangle(4, 6)
         r1.display()
         sys.stdout = sys.__stdout__
-        self.assertEqual("####\n####\n####\n####\n####\n####",
+        self.assertEqual("####\n####\n####\n####\n####\n####\n",
                             capOut.getvalue())
         capOut.close()
         capOut = io.StringIO()
@@ -81,7 +81,7 @@ class BaseTest(unittest.TestCase):
         r2 = Rectangle(2, 2)
         r2.display()
         sys.stdout = sys.__stdout__
-        self.assertEqual("##\n##",
+        self.assertEqual("##\n##\n",
                             capOut.getvalue())
         capOut.close()
 
