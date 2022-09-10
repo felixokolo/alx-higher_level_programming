@@ -19,8 +19,7 @@ if __name__ == '__main__':
              'ORDER BY c.id) j ' +
              'WHERE LOWER(j.s_name) = LOWER(\'{}\')'.
              format(sys.argv[4]))
-    if (query.count('states') == 1 and
-        query.count('cities') == 1):
+    if (query.count('states') == 1 and query.count('cities') == 1):
         r = cur.execute(query)
         rows = cur.fetchall()
         res = ''
