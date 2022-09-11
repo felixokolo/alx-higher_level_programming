@@ -12,5 +12,8 @@ if __name__ == "__main__":
                            format(sys.argv[1], sys.argv[2],
                                   sys.argv[3]), pool_pre_ping=True)
     session = sessionmaker(bind=engine)()
-    res = session.query(State).filter_by(id=1).first()
-    print('{}: {}'.format(res.id, res.name))
+    res = session.query(State).filter(State.name.ilike(sys.argv[4])).first()
+    if res is None:
+        print('Not found')
+    else:
+        print('{}'.format(res.id))
