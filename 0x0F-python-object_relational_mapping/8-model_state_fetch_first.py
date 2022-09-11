@@ -13,4 +13,7 @@ if __name__ == "__main__":
                                   sys.argv[3]), pool_pre_ping=True)
     session = sessionmaker(bind=engine)()
     res = session.query(State).first()
-    print('{}: {}'.format(res.id, res.name))
+    if res is None:
+        print('Nothing')
+    else:
+        print('{}: {}'.format(res.id, res.name))
