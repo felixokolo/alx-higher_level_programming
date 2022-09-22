@@ -4,5 +4,5 @@ response=$(curl -sI "$1")
 c=$(echo $response | grep 'HTTP' | awk '{print $2}')
 if ((c == 200))
 then
-	echo grep '<body>' $response
+	curl -s "$1" -X GET -L 
 fi
