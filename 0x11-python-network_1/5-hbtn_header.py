@@ -3,8 +3,8 @@
     variable found in the header of the response.
 """
 if __name__ == "__main__":
-    import urllib.request
+    import request
     import sys
-    with urllib.request.urlopen(sys.argv[1]) as response:
-        head = response.headers.get('X-Request-Id')
-        print(head)
+
+    r = requests.get(sys.argv[1])
+    print(r.headers.get('X-Request-Id'))
