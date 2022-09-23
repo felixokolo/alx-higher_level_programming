@@ -12,4 +12,4 @@ if __name__ == "__main__":
           \n\t- utf8 content: {}".
           format(type(html),
                  html,
-                 html.decode("utf8")))
+                 html.decode("utf8", "replace")))
