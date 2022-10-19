@@ -2,7 +2,6 @@
 // A script to get status code
 const request = require('request');
 const base = process.argv[2];
-const id = '18';
 let res;
 let count = 0;
 request.get(base + '/?format=json', (error, response, body) => {
