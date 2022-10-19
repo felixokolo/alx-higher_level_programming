@@ -1,0 +1,11 @@
+*.exe
+.*
+*.out
+*.o
+*.dev
+*.layout
+*.win
+!.gitignore
+node_modules/
+package.json
+package-lock.json
