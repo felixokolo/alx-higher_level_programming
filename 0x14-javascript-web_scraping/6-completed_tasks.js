@@ -8,15 +8,13 @@ request.get(base, (error, response, body) => {
     const result = JSON.parse(body);
     let i = 0;
     while (i < result.length) {
-      if (result[i]['userId'] in res) {
-	if (result[i]['completed'])
-        res[result[i]['userId']]++;
+      if (result[i].userId in res) {
+        if (result[i].completed) { res[result[i].userId]++; }
       } else {
-        if (result[i]['completed'])
-        res[result[i]['userId']] = 1;
+        if (result[i].completed) { res[result[i].userId] = 1; }
       }
-    i++;
+      i++;
     }
   }
-    console.log(res);
+  console.log(res);
 });
