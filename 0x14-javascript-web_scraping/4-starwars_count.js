@@ -12,7 +12,7 @@ request.get(base + '/?format=json', (error, response, body) => {
     while (i < res.results.length) {
       let j = 0;
       while (j < res.results[i].characters.length) {
-        if (res.results[i].characters[j].includes(id)) {
+        if (res.results[i].characters[j].includes('/18/')) {
           count = count + 1;
         }
         j++;
